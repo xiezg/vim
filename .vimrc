@@ -1,6 +1,6 @@
 "call pathogen#infect()
 
-set hlsearch
+set hlsearch        "高亮选择
 set nu
 "set relativenumber
 set mouse=a
