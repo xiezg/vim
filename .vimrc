@@ -1,5 +1,6 @@
 "call pathogen#infect()
 
+set hlsearch
 set nu
 "set relativenumber
 set mouse=a
