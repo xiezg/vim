@@ -5,7 +5,7 @@ set expandtab	                        "To insert space characters whenever the t
 set tabstop=4	                        "4个空格字符代替一个Tab字符
 set shiftwidth=4                        "shfit +>> 缩进时，插入的4个空格
 set autoindent                          "开启自动缩进，换行时，自动与上一行保持相同的缩进
-autocmd FileType yaml,yml set list      ”yaml文件自动打开 set list
+autocmd FileType yaml,yml set list      "yaml文件自动打开 set list
 "===================
 set hlsearch        "高亮选择
 set nu
