@@ -8,23 +8,26 @@ set autoindent                          "开启自动缩进，换行时，自动
 autocmd FileType yaml,yml set list      "yaml文件自动打开 set list
 "===================
 set hlsearch        "高亮选择
-set nu
 "set relativenumber
-set mouse=a
 set nowrap
+
+"自动补全
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+inoremap " ""<Esc>i
+
+"disable arrow
+noremap <up> <Nop>
+noremap <down> <Nop>
+noremap <right> <Nop>
+noremap <left> <Nop>
+
 colorscheme desert
 "set cindent
 set noeb
-set tabstop=4
-set expandtab
 set fencs=utf-8,GB18030,ucs-bom,default,latin1
 set ignorecase
-set path+=/sysbuild/source/ks_apps/inc/
-set path+=/sysbuild/source/ks_apps/inc/sfl/
-set path+=/sysbuild/source/ks_apps/lib/libdatabase/inc
-set path+=/sysbuild/source/ks_apps/inc/libfastcommon/
-
-inoremap { {}<ESC>i
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -34,17 +37,8 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
-set tags+=/usr/local/src/kingsoft_vgm_docs/libfastcommon-1.0.36/tags
-set tags+=/usr/local/src/hiredis-0.13.3/tags
-set tags+=/usr/local/src/zlog-1.2.12/tags
-set tags+=/usr/local/src/libzdb-3.1/tags
-set tags+=/usr/local/src/kingsoft_vgm_docs/fastdfs-5.0.11/tags
-set tags+=/usr/local/src/kingsoft_vgm_docs/ks_apps/src/lcmshow/tags
-set tags+=/usr/local/src/protobuf-2.5.0/tags
-
 syntax enable
 filetype plugin on
-set number
 let g:go_disable_autoinstall = 0
 
 " Highlight
